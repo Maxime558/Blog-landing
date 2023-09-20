@@ -34,7 +34,6 @@ nav {
   min-width: 100%;
   position: absolute;
   max-width: 1920px;
-  height: 2.5rem;
   background-color: rgba(0, 0, 0, 0);
   z-index: 5;
   display: flex;
@@ -133,6 +132,49 @@ nav:hover {
   color: black;
   padding: 0.3rem 1.3rem;
 }
+.submenu-toggle {
+  position: relative;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+#connectCheckbox {
+  display: none;
+}
+
+.submenu-toggle .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: none;
+  background-color: rgb(85, 85, 85);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 150px;
+}
+
+#connectCheckbox:checked + .submenu {
+  display: block;
+}
+#burger:checked ~ #navbar {
+  transition: all 0.7s;
+  max-height: 600px;
+  height: 80vh;
+}
+.submenu li {
+  padding: 10px;
+}
+
+.hr-line {
+  border-top: 1px solid #ccc;
+  width: 100%;
+  margin: 10px 0;
+}
 
 header {
   display: flex;
@@ -157,6 +199,11 @@ header h1 {
 .imgHeader {
   position: relative;
   text-align: center;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  height: 100%;
+  width: 100%;
 }
 
 .imgHeader h1 {
@@ -173,6 +220,22 @@ header h1 {
   margin-top: 20px;
 }
 
+
+.buttonsdesktop button {
+  margin-right: 20px;
+  margin-top: 20px;
+  padding: 15px 20px;
+  background-color: #33333300;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 61px 61px 61px 61px;
+  -webkit-border-radius: 61px 61px 61px 61px;
+  -moz-border-radius: 61px 61px 61px 61px;
+  border: 1px solid rgb(255, 255, 255);
+  font-weight: 900;
+  display: none;
+}
 .buttons button {
   margin-right: 20px;
   margin-top: 20px;
@@ -195,7 +258,10 @@ header button:hover {
   background-color: rgb(255, 255, 255);
   color: red;
 }
-
+.buttonsdesktop button:hover {
+  background-color: rgb(255, 255, 255);
+  color: red;
+}
 /* Section Future */
 
 #future {
@@ -308,7 +374,7 @@ header button:hover {
 
 #footer {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   background: linear-gradient(hsl(236, 18%, 18%), hsl(236, 23%, 25%));
   border-radius: 0px 100px 0px 0px;
@@ -317,18 +383,77 @@ header button:hover {
   height: 90vh;
   padding-top: 20px;
 }
-#footer img{
+#footer img {
   margin: 4rem 0px;
 }
-#footer h2{
+#footer h2 {
   margin: 1rem 0px;
   color: white;
 }
-#footer p{
+#footer p {
   margin: 1rem 0px;
   color: white;
   text-align: center;
   font-weight: 1rem;
   cursor: pointer;
+}
+
+/* Media Queries */
+
+
+@media screen and (min-width: 1440px) {
+
+  /* Menu burger  */
+
+  #imgburger, #croix {
+    display: none;
+  }
+
+  .navMenu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navMenu li {
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .navMenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    list-style: none;
+  }
+
+  .navMenu li {
+    margin-right: 20px;
+    padding: 0;
+  }
+
+  #burger:checked + .navMenu {
+    display: flex;
+  }
+  
+  /* Boutons */
+  .buttonsdesktop {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+  }
+  .buttonsdesktop button {
+    margin: 10px;
+    display: block;
+  }
+  .buttonsdesktop button:hover {
+    background-color: rgb(255, 255, 255);
+    color: red;
+  }
+
 }
 
