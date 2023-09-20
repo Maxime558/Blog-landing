@@ -231,6 +231,7 @@ header button:hover {
   padding: 20px;
   position: relative;
   z-index: 2;
+  padding-left: 0;
 }
 
 #art img {
@@ -243,7 +244,7 @@ header button:hover {
 #art #backgroundart {
   position: absolute;
   display: flex;
-  flex-direction: column; /* Place les éléments en colonne */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
@@ -254,6 +255,7 @@ header button:hover {
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto;
+  width: 100%;
   max-width: 1920px;
   height: 70vh;
   top: 50%;
