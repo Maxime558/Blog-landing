@@ -199,9 +199,9 @@ header h1 {
 .imgHeader {
   position: relative;
   text-align: center;
-  display: flex; 
-  flex-direction: column; 
-  justify-content: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
   width: 100%;
 }
@@ -219,7 +219,6 @@ header h1 {
 .buttons {
   margin-top: 20px;
 }
-
 
 .buttonsdesktop button {
   margin-right: 20px;
@@ -283,6 +282,7 @@ header button:hover {
   margin-bottom: 2rem;
   color: grey;
   font-size: 1rem;
+  margin-bottom: 100px;
 }
 
 #future img {
@@ -302,8 +302,11 @@ header button:hover {
 
 #art img {
   max-width: 100%;
+  width: 60%;
   height: auto;
-  position: relative;
+  position: absolute;
+  top: -20%;
+  right: 25%;
   z-index: 2;
 }
 
@@ -354,6 +357,7 @@ header button:hover {
 }
 #blog img {
   max-width: 100%;
+  margin-top: 150px;
 }
 #blog h2 {
   margin-bottom: 1rem;
@@ -400,13 +404,28 @@ header button:hover {
 
 /* Media Queries */
 
-
 @media screen and (min-width: 1440px) {
-
   /* Menu burger  */
 
-  #imgburger, #croix {
+  #imgburger,
+  #croix {
     display: none;
+  }
+  #navbar {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  #navbar li {
+    margin-left: 20px;
+  }
+
+  #navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
   }
 
   .navMenu {
@@ -418,7 +437,7 @@ header button:hover {
     margin-left: 10px;
     margin-right: 10px;
   }
-  
+
   .navMenu {
     position: absolute;
     top: 0;
@@ -435,11 +454,11 @@ header button:hover {
   #burger:checked + .navMenu {
     display: flex;
   }
-  
+
   /* Boutons */
   .buttonsdesktop {
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     align-items: center;
     position: absolute;
     top: 20px;
@@ -455,5 +474,154 @@ header button:hover {
     color: red;
   }
 
+  /* Future */
+  #future {
+    position: relative;
+    padding: 2rem;
+  }
+
+  #future img {
+    position: absolute;
+    right: 0%;
+    top: 25%;
+    max-width: 50%;
+    height: 50vh;
+    width: 40%;
+  }
+  #future h2 {
+    padding-top: 3rem;
+  }
+  #future h2,
+  #future p {
+    max-width: 50%;
+    margin-top: 3rem;
+  }
+  #titrefuture {
+    position: absolute;
+    right: 40%;
+    top: -5%;
+  }
+
+  #titrefuture {
+    font-size: 3rem;
+  }
+  /* Art */
+  #art #backgroundart {
+    width: 180%;
+    right: -40%;
+    height: 60vh;
+    left: 0;
+    text-align: left;
+    margin-right: 0px;
+    flex: 1;
+  }
+
+  #art {
+    display: flex;
+    align-items: center;
+  }
+
+  #art img {
+    max-width: 100%;
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: -10%;
+    left: 0%;
+    z-index: 2;
+  }
+  #art #backgroundart {
+    flex: 1;
+    text-align: right;
+  }
+
+  #art #backgroundart h2 {
+    position: absolute;
+    text-align: right;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    right: 10%;
+    bottom: 60%;
+  }
+  #art #backgroundart p {
+    position: absolute;
+    margin: 0 50px;
+    padding: 0 50px;
+  }
+  /* Blog */
+  #blog {
+    height: 70vh;
+    max-width: 800px;
+    margin: 60vh auto 0;
+    margin-left: 700px;
+    margin-top: 650px;
+  }
+
+  #blog h2,
+  #blog p {
+    text-align: left;
+  }
+  #blog img {
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    right: 90%;
+    top: -10%;
+    max-width: 800px;
+  }
+  #divblog {
+    margin-left: 80px;
+    margin-right: 50px;
+    margin-top: 60px;
+  }
+  /* Footer */
+  #logo2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+
+  #imglogo2 {
+    width: 15%;
+    height: auto;
+    margin-left: 64px;
+    margin-right: 64px;
+
+  }
+
+  .colonne {
+    margin-right: 20px;
+  }
+
+  #footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+    height: 55vh;
+  }
+  #colonne1{
+    position: absolute;
+    left: 30%;
+    top: 8%;
+  }
+  #colonne2{
+    position: absolute;
+    left: 50%;
+    top: 8%;
+  }
+  #colonne3{
+    position: absolute;
+    left: 70%;
+    top: 8%;
+  }
+  #footer h2{
+    margin: 4rem;
+  }
+  #footer p{
+    margin: 1.5rem;
+  }
 }
 
