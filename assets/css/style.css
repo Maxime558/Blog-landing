@@ -77,6 +77,7 @@ nav label {
   padding: 0rem;
   max-height: 0px;
   overflow: hidden;
+  top: 120%;
 }
 
 #navbar li {
@@ -129,8 +130,9 @@ nav:hover {
 #navbar a {
   text-decoration: none;
   font-size: 1rem;
-  color: black;
+  color: rgb(3, 3, 3);
   padding: 0.3rem 1.3rem;
+  z-index: 5;
 }
 .submenu-toggle {
   position: relative;
@@ -138,7 +140,6 @@ nav:hover {
 .submenu {
   display: none;
   position: absolute;
-  top: 100%;
   left: 0;
 }
 
@@ -148,7 +149,7 @@ nav:hover {
 
 .submenu-toggle .submenu {
   position: absolute;
-  top: 100%;
+  top: 360%;
   left: 0;
   right: 0;
   display: none;
@@ -156,6 +157,10 @@ nav:hover {
   border: 1px solid #ccc;
   border-radius: 4px;
   min-width: 150px;
+  cursor: pointer;
+}
+label{
+  cursor: pointer;
 }
 
 #connectCheckbox:checked + .submenu {
@@ -424,7 +429,7 @@ header button:hover {
 
   #navbar a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1rem;
   }
 
@@ -434,8 +439,8 @@ header button:hover {
   }
   .navMenu li {
     display: block;
-    margin-left: 10px;
     margin-right: 10px;
+    z-index: 5;
   }
 
   .navMenu {
@@ -444,11 +449,6 @@ header button:hover {
     right: 0;
     display: flex;
     list-style: none;
-  }
-
-  .navMenu li {
-    margin-right: 20px;
-    padding: 0;
   }
 
   #burger:checked + .navMenu {
@@ -580,7 +580,8 @@ header button:hover {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-left: 20px;
+    margin-left: 64px;
+
   }
 
   #imglogo2 {
@@ -588,7 +589,6 @@ header button:hover {
     height: auto;
     margin-left: 64px;
     margin-right: 64px;
-
   }
 
   .colonne {
